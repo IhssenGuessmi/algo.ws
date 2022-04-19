@@ -1,0 +1,20 @@
+ALGORITHM checkpoint
+VAR
+    sentence:STRING
+    c:CHAR
+    nW,nV,nS:INTEGER
+BEGIN
+    read(sentence)
+    WHILE (c<>".") DO
+        nS=nS+1
+        IF (c=" ") THEN
+            nW=nW+1
+        END_IF
+        IF (c in ["a","e","i","o","u","A","E","I","O","U"]) THEN
+            nV=nV+1
+        END_IF
+    END_WHILE
+    write (nS)
+    write (nV)
+    write (nW)
+END
